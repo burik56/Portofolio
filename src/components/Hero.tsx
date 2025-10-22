@@ -1,9 +1,10 @@
-import { ChevronDown, Github, Linkedin, Mail } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
+import { useEffect, useState } from "react";
+import fotoAden from "../assets/IMG_20230507_143809.jpg";
 
 export function Hero() {
-  const [text, setText] = useState('');
-  const fullText = 'Web Developer';
+  const [text, setText] = useState("");
+  const fullText = "Web Developer";
 
   useEffect(() => {
     let index = 0;
@@ -20,14 +21,17 @@ export function Hero() {
   }, []);
 
   const scrollToContact = () => {
-    const element = document.getElementById('contact');
+    const element = document.getElementById("contact");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative pt-16">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center relative pt-16"
+    >
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute w-96 h-96 -top-48 -left-48 bg-blue-500/10 rounded-full blur-3xl"></div>
         <div className="absolute w-96 h-96 -bottom-48 -right-48 bg-blue-500/10 rounded-full blur-3xl"></div>
@@ -44,21 +48,36 @@ export function Hero() {
           />
         ))}
 
-        <div className="lightning-bolt" style={{ left: '20%' }}></div>
-        <div className="lightning-bolt" style={{ left: '80%' }}></div>
-        
+        <div className="lightning-bolt" style={{ left: "20%" }}></div>
+        <div className="lightning-bolt" style={{ left: "80%" }}></div>
+
         {/* Electric border effects */}
         <div className="electric-border absolute inset-0 pointer-events-none"></div>
-        
+
         {/* Data stream effects */}
-        <div className="data-stream" style={{ top: '10%', animationDelay: '0s' }}>
-          01010101 01101000 01100101 01101100 01101100 01101111 00100000 01010111 01101111 01110010 01101100 01100100
+        <div
+          className="data-stream"
+          style={{ top: "10%", animationDelay: "0s" }}
+        >
+          01010101 01101000 01100101 01101100 01101100 01101111 00100000
+          01010111 01101111 01110010 01101100 01100100
         </div>
-        <div className="data-stream" style={{ top: '30%', animationDelay: '3s' }}>
-          01001001 00100111 01101101 00100000 01000001 00100000 01000100 01100101 01110110 01100101 01101100 01101111 01110000 01100101 01110010
+        <div
+          className="data-stream"
+          style={{ top: "30%", animationDelay: "3s" }}
+        >
+          01001001 00100111 01101101 00100000 01000001 00100000 01000100
+          01100101 01110110 01100101 01101100 01101111 01110000 01100101
+          01110010
         </div>
-        <div className="data-stream" style={{ top: '70%', animationDelay: '6s' }}>
-          01000011 01110010 01100101 01100001 01110100 01101001 01101110 01100111 00100000 01000011 01111001 01100010 01100101 01110010 00100000 01000101 01111000 01110000 01100101 01110010 01101001 01100101 01101110 01100011 01100101 01110011
+        <div
+          className="data-stream"
+          style={{ top: "70%", animationDelay: "6s" }}
+        >
+          01000011 01110010 01100101 01100001 01110100 01101001 01101110
+          01100111 00100000 01000011 01111001 01100010 01100101 01110010
+          00100000 01000101 01111000 01110000 01100101 01110010 01101001
+          01100101 01101110 01100011 01100101 01110011
         </div>
       </div>
 
@@ -68,7 +87,7 @@ export function Hero() {
             <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
             <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-blue-500 neon-box">
               <img
-                src="/src/assets/IMG_20230507_143809.jpg"
+                src={fotoAden}
                 alt="Aden"
                 className="w-full h-full object-cover"
               />
@@ -86,13 +105,15 @@ export function Hero() {
 
         <div className="h-20 mb-8">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-blue-400 glow-blue">
-            {text}<span className="animate-pulse">|</span>
+            {text}
+            <span className="animate-pulse">|</span>
           </h2>
         </div>
 
         <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-12 fade-in">
-          Menciptakan pengalaman digital yang menakjubkan dengan teknologi web modern.
-          Berspesialisasi dalam membangun aplikasi responsif dan ramah pengguna.
+          Menciptakan pengalaman digital yang menakjubkan dengan teknologi web
+          modern. Berspesialisasi dalam membangun aplikasi responsif dan ramah
+          pengguna.
         </p>
 
         <div className="flex flex-wrap gap-4 justify-center mb-12 fade-in">
