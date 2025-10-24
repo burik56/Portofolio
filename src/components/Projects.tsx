@@ -1,6 +1,9 @@
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, Filter } from 'lucide-react';
+import { useState } from 'react';
 
 export function Projects() {
+  const [activeFilter, setActiveFilter] = useState<'All' | 'Frontend' | 'Backend'>('All');
+
   const projects = [
     {
       title: 'E-Commerce Platform',
@@ -9,6 +12,7 @@ export function Projects() {
       image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800',
       github: '#',
       demo: '#',
+      category: 'Backend' as const,
     },
     {
       title: 'Social Media Dashboard',
@@ -17,6 +21,7 @@ export function Projects() {
       image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800',
       github: '#',
       demo: '#',
+      category: 'Frontend' as const,
     },
     {
       title: 'Task Management App',
@@ -25,6 +30,7 @@ export function Projects() {
       image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800',
       github: '#',
       demo: '#',
+      category: 'Backend' as const,
     },
     {
       title: 'Weather Forecast App',
@@ -33,6 +39,7 @@ export function Projects() {
       image: 'https://images.pexels.com/photos/1242348/pexels-photo-1242348.jpeg?auto=compress&cs=tinysrgb&w=800',
       github: '#',
       demo: '#',
+      category: 'Frontend' as const,
     },
     {
       title: 'Portfolio CMS',
@@ -41,6 +48,7 @@ export function Projects() {
       image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800',
       github: '#',
       demo: '#',
+      category: 'Backend' as const,
     },
     {
       title: 'Fitness Tracking Platform',
@@ -49,8 +57,13 @@ export function Projects() {
       image: 'https://images.pexels.com/photos/4162491/pexels-photo-4162491.jpeg?auto=compress&cs=tinysrgb&w=800',
       github: '#',
       demo: '#',
+      category: 'Backend' as const,
     },
   ];
+
+  const filteredProjects = activeFilter === 'All'
+    ? projects
+    : projects.filter(project => project.category === activeFilter);
 
   return (
     <section id="projects" className="min-h-screen flex items-center py-20 relative">
@@ -73,8 +86,45 @@ export function Projects() {
           <div className="w-24 h-1 bg-blue-500 mx-auto glow-blue"></div>
         </div>
 
+        {/* Filter Buttons */}
+        <div className="flex justify-center gap-4 mb-12">
+          <button
+            onClick={() => setActiveFilter('All')}
+            className={`px-6 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
+              activeFilter === 'All'
+                ? 'bg-blue-500 text-white border-glow'
+                : 'bg-blue-500/10 text-blue-400 border border-blue-500/20 hover:bg-blue-500/20'
+            }`}
+          >
+            <Filter size={16} />
+            Semua
+          </button>
+          <button
+            onClick={() => setActiveFilter('Frontend')}
+            className={`px-6 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
+              activeFilter === 'Frontend'
+                ? 'bg-blue-500 text-white border-glow'
+                : 'bg-blue-500/10 text-blue-400 border border-blue-500/20 hover:bg-blue-500/20'
+            }`}
+          >
+            <Filter size={16} />
+            Frontend
+          </button>
+          <button
+            onClick={() => setActiveFilter('Backend')}
+            className={`px-6 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
+              activeFilter === 'Backend'
+                ? 'bg-blue-500 text-white border-glow'
+                : 'bg-blue-500/10 text-blue-400 border border-blue-500/20 hover:bg-blue-500/20'
+            }`}
+          >
+            <Filter size={16} />
+            Backend
+          </button>
+        </div>
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {filteredProjects.map((project, index) => (
             <div
               key={index}
               className="cyber-border rounded-lg overflow-hidden bg-gradient-to-br from-blue-500/5 to-transparent backdrop-blur-sm group hover:from-blue-500/10 transition-all duration-300"
