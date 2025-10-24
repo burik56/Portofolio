@@ -82,7 +82,7 @@ export function Hero() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <div className="flex justify-center mb-8 fade-in">
+        <div className="flex justify-center mb-8 animate-fadeIn">
           <div className="relative group">
             <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
             <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-blue-500 neon-box">
@@ -98,25 +98,25 @@ export function Hero() {
         </div>
 
         <div className="scan-line mb-8">
-          <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold mb-4 fade-in">
+          <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold mb-4 animate-fadeIn" style={{ animationDelay: '0.2s' }}>
             Halo, Saya <span className="glow-blue-strong">Aden</span>
           </h1>
         </div>
 
         <div className="h-20 mb-8">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-blue-400 glow-blue">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-blue-400 glow-blue animate-fadeIn" style={{ animationDelay: '0.4s' }}>
             {text}
             <span className="animate-pulse">|</span>
           </h2>
         </div>
 
-        <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-12 fade-in">
+        <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-12 animate-fadeIn" style={{ animationDelay: '0.6s' }}>
           Menciptakan pengalaman digital yang menakjubkan dengan teknologi web
           modern. Berspesialisasi dalam membangun aplikasi responsif dan ramah
           pengguna.
         </p>
 
-        <div className="flex flex-wrap gap-4 justify-center mb-12 fade-in">
+        <div className="flex flex-wrap gap-4 justify-center mb-12 animate-fadeIn" style={{ animationDelay: '0.8s' }}>
           <button
             onClick={scrollToContact}
             className="px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg transition-all duration-300 border-glow hover:border-glow-hover"
@@ -131,7 +131,7 @@ export function Hero() {
           </a>
         </div>
 
-        <div className="flex gap-6 justify-center fade-in">
+        <div className="flex gap-6 justify-center animate-fadeIn" style={{ animationDelay: '1s' }}>
           <a
             href="https://github.com/burik56"
             target="_blank"

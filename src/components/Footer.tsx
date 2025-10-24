@@ -17,7 +17,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-slate-900 dark:bg-slate-950 text-white py-12 relative">
+    <footer className="bg-slate-900 dark:bg-slate-950 text-white py-12 relative animate-fadeIn">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>

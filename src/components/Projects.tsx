@@ -126,8 +126,12 @@ export function Projects() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => (
             <div
-              key={index}
-              className="cyber-border rounded-lg overflow-hidden bg-gradient-to-br from-blue-500/5 to-transparent backdrop-blur-sm group hover:from-blue-500/10 transition-all duration-300"
+              key={`${project.title}-${activeFilter}`}
+              className="cyber-border rounded-lg overflow-hidden bg-gradient-to-br from-blue-500/5 to-transparent backdrop-blur-sm group hover:from-blue-500/10 transition-all duration-300 animate-fadeInUp"
+              style={{
+                animationDelay: `${index * 0.1}s`,
+                animationFillMode: 'both'
+              }}
             >
               <div className="relative overflow-hidden h-48">
                 <img

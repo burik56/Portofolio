@@ -34,14 +34,14 @@ export function About() {
         </div>
         
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4 glow-blue">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4 glow-blue animate-fadeIn">
             Tentang Saya
           </h2>
-          <div className="w-24 h-1 bg-blue-500 mx-auto glow-blue"></div>
+          <div className="w-24 h-1 bg-blue-500 mx-auto glow-blue animate-fadeIn" style={{ animationDelay: '0.2s' }}></div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-          <div className="space-y-6">
+          <div className="space-y-6 animate-slideInLeft">
             <p className="text-lg text-gray-300 leading-relaxed">
               Saya adalah web developer yang bersemangat dengan kecintaan untuk menciptakan solusi digital yang inovatif.
               Dengan keahlian dalam teknologi web modern, saya mengubah ide menjadi kenyataan melalui
@@ -58,7 +58,7 @@ export function About() {
             </p>
           </div>
 
-          <div className="relative electric-border">
+          <div className="relative electric-border animate-slideInRight">
             <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg blur opacity-25"></div>
             <div className="relative cyber-border rounded-lg p-8 bg-gradient-to-br from-blue-500/5 to-transparent backdrop-blur-sm neon-box">
               <div className="space-y-4">
@@ -94,7 +94,8 @@ export function About() {
           {highlights.map((item, index) => (
             <div
               key={index}
-              className="relative cyber-border electric-border rounded-lg p-6 bg-gradient-to-br from-blue-500/5 to-transparent backdrop-blur-sm hover:from-blue-500/10 transition-all duration-300 group overflow-hidden"
+              className="relative cyber-border electric-border rounded-lg p-6 bg-gradient-to-br from-blue-500/5 to-transparent backdrop-blur-sm hover:from-blue-500/10 transition-all duration-300 group overflow-hidden animate-fadeInUp"
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="absolute inset-0 hologram-effect opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative z-10">

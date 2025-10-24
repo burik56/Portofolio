@@ -67,17 +67,17 @@ export function Contact() {
         </div>
         
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4 glow-blue">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4 glow-blue animate-fadeIn">
             Hubungi Saya
           </h2>
-          <div className="w-24 h-1 bg-blue-500 mx-auto glow-blue"></div>
-          <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
+          <div className="w-24 h-1 bg-blue-500 mx-auto glow-blue animate-fadeIn" style={{ animationDelay: '0.2s' }}></div>
+          <p className="text-gray-400 mt-4 max-w-2xl mx-auto animate-fadeIn" style={{ animationDelay: '0.4s' }}>
             Punya proyek dalam pikiran atau ingin berkolaborasi? Jangan ragu untuk menghubungi!
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
-          <div className="space-y-8">
+          <div className="space-y-8 animate-slideInLeft">
             <div>
               <h3 className="text-2xl font-semibold mb-6 text-blue-400 glow-blue">
                 Informasi Kontak
@@ -87,7 +87,8 @@ export function Contact() {
                   <a
                     key={index}
                     href={info.link}
-                    className="flex items-center gap-4 cyber-border rounded-lg p-4 bg-gradient-to-br from-blue-500/5 to-transparent backdrop-blur-sm hover:from-blue-500/10 transition-all duration-300 group"
+                    className="flex items-center gap-4 cyber-border rounded-lg p-4 bg-gradient-to-br from-blue-500/5 to-transparent backdrop-blur-sm hover:from-blue-500/10 transition-all duration-300 group animate-fadeInUp"
+                    style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <div className="text-blue-400 group-hover:scale-110 transition-transform">
                       {info.icon}
@@ -101,7 +102,7 @@ export function Contact() {
               </div>
             </div>
 
-            <div className="cyber-border rounded-lg p-6 bg-gradient-to-br from-blue-500/5 to-transparent backdrop-blur-sm">
+            <div className="cyber-border rounded-lg p-6 bg-gradient-to-br from-blue-500/5 to-transparent backdrop-blur-sm animate-fadeInUp" style={{ animationDelay: '0.3s' }}>
               <h3 className="text-xl font-semibold mb-4 text-blue-400 glow-blue">
                 Mari Terhubung
               </h3>
@@ -113,7 +114,7 @@ export function Contact() {
             </div>
           </div>
 
-          <div className="cyber-border rounded-lg p-8 bg-gradient-to-br from-blue-500/5 to-transparent backdrop-blur-sm">
+          <div className="cyber-border rounded-lg p-8 bg-gradient-to-br from-blue-500/5 to-transparent backdrop-blur-sm animate-slideInRight">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">

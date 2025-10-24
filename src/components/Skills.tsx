@@ -44,17 +44,18 @@ export function Skills() {
         </div>
         
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4 glow-blue">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4 glow-blue animate-fadeIn">
             Keahlian & Keahlian
           </h2>
-          <div className="w-24 h-1 bg-blue-500 mx-auto glow-blue"></div>
+          <div className="w-24 h-1 bg-blue-500 mx-auto glow-blue animate-fadeIn" style={{ animationDelay: '0.2s' }}></div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
           {skillCategories.map((category, categoryIndex) => (
             <div
               key={categoryIndex}
-              className="cyber-border rounded-lg p-6 bg-gradient-to-br from-blue-500/5 to-transparent backdrop-blur-sm"
+              className="cyber-border rounded-lg p-6 bg-gradient-to-br from-blue-500/5 to-transparent backdrop-blur-sm animate-fadeInUp"
+              style={{ animationDelay: `${categoryIndex * 0.2}s` }}
             >
               <h3 className="text-2xl font-semibold mb-6 text-blue-400 glow-blue">
                 {category.category}
