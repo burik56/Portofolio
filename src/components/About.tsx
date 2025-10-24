@@ -64,19 +64,19 @@ export function About() {
               <div className="space-y-4">
                 <div className="flex items-center justify-between py-3 border-b border-blue-500/20">
                   <span className="text-gray-400">Nama:</span>
-                  <span className="text-blue-400 font-semibold glow-blue">Aden</span>
+                  <span className="text-blue-400 font-semibold glow-blue">Aden Septian</span>
                 </div>
                 <div className="flex items-center justify-between py-3 border-b border-blue-500/20">
                   <span className="text-gray-400">Lokasi:</span>
-                  <span className="text-blue-400 font-semibold glow-blue">Your City, Country</span>
+                  <span className="text-blue-400 font-semibold glow-blue">Jakarta, Indonesia</span>
                 </div>
                 <div className="flex items-center justify-between py-3 border-b border-blue-500/20">
                   <span className="text-gray-400">Pengalaman:</span>
-                  <span className="text-blue-400 font-semibold glow-blue">X+ Years</span>
+                  <span className="text-blue-400 font-semibold glow-blue">4 Tahun</span>
                 </div>
                 <div className="flex items-center justify-between py-3">
                   <span className="text-gray-400">Email:</span>
-                  <span className="text-blue-400 font-semibold glow-blue">your.email@example.com</span>
+                  <span className="text-blue-400 font-semibold glow-blue">adenseptian52@gmail.com</span>
                 </div>
               </div>
 

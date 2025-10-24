@@ -133,7 +133,7 @@ export function Hero() {
 
         <div className="flex gap-6 justify-center fade-in">
           <a
-            href="https://github.com"
+            href="https://github.com/burik56"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-blue-400 transition-all duration-300 hover:scale-110 pulse-glow p-3 rounded-full border border-blue-500/20"
@@ -141,7 +141,7 @@ export function Hero() {
             <Github size={24} />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/aden-septian-sasmito-a23261309/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-blue-400 transition-all duration-300 hover:scale-110 pulse-glow p-3 rounded-full border border-blue-500/20"
@@ -149,7 +149,7 @@ export function Hero() {
             <Linkedin size={24} />
           </a>
           <a
-            href="mailto:your.email@example.com"
+            href="mailto:adenseptian52@gmail.com"
             className="text-gray-400 hover:text-blue-400 transition-all duration-300 hover:scale-110 pulse-glow p-3 rounded-full border border-blue-500/20"
           >
             <Mail size={24} />

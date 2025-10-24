@@ -14,33 +14,40 @@ export function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
+    // Construct mailto link with form data
+    const subject = encodeURIComponent(`Pesan dari ${formData.name}`);
+    const body = encodeURIComponent(`Nama: ${formData.name}\nEmail: ${formData.email}\n\nPesan:\n${formData.message}`);
+    const mailtoLink = `mailto:adenseptian@gmail.com?subject=${subject}&body=${body}`;
+
+    // Open email client
+    window.location.href = mailtoLink;
+
+    // Reset form after a short delay
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitStatus('success');
       setFormData({ name: '', email: '', message: '' });
-
       setTimeout(() => setSubmitStatus('idle'), 3000);
-    }, 1500);
+    }, 500);
   };
 
   const contactInfo = [
     {
       icon: <Mail className="w-6 h-6" />,
       title: 'Email',
-      value: 'your.email@example.com',
-      link: 'mailto:your.email@example.com',
+      value: 'adenseptian@gmail.com',
+      link: 'mailto:adenseptian@gmail.com',
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: 'Phone',
-      value: '+1 234 567 890',
-      link: 'tel:+1234567890',
+      value: '+62 85608496149',
+      link: 'tel:+6285608496149',
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: 'Location',
-      value: 'Your City, Country',
+      value: 'Jakarta, Indonesia',
       link: '#',
     },
   ];
