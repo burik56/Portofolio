@@ -79,6 +79,11 @@ export const socialLinks: SocialLink[] = [
     icon: "Linkedin"
   },
   {
+    name: "Instagram",
+    url: "https://www.instagram.com/aden5eptian/",
+    icon: "Instagram"
+  },
+  {
     name: "Email",
     url: "mailto:your.email@example.com",
     icon: "Mail"

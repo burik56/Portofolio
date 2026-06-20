@@ -1,4 +1,4 @@
-import { Heart, Github, Linkedin, Twitter, Mail, ArrowUp } from 'lucide-react';
+import { Heart, Github, Linkedin, Instagram, Twitter, Mail, ArrowUp } from 'lucide-react';
 import { personalInfo, socialLinks } from '../data/portfolioData';
 
 export function Footer() {
@@ -10,6 +10,7 @@ export function Footer() {
     const icons: Record<string, React.ComponentType<{ size?: number }>> = {
       Github,
       Linkedin,
+      Instagram,
       Twitter,
       Mail
     };
